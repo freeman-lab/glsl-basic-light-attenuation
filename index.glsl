@@ -1,6 +1,6 @@
 #pragma glslify: BasicLight = require('glsl-basic-light')
 
-float BasicLightAttenuation(BasicLight light, vec3 position, vec3 direction) {
+float BasicLightAttenuation(BasicLight light, vec3 direction) {
 	float attenuation;
 	float angle;
 
