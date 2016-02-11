@@ -1,6 +1,6 @@
-#pragma glslify: BasicLight = require('glsl-basic-light')
+#pragma glslify: SceneLight = require('glsl-scene-light')
 
-float BasicLightAttenuation(BasicLight light, vec3 direction) {
+float calcLightAttenuation(SceneLight light, vec3 direction) {
 	float attenuation;
 	float angle;
 
@@ -17,4 +17,4 @@ float BasicLightAttenuation(BasicLight light, vec3 direction) {
 	return attenuation;
 }
 
-#pragma glslify: export(BasicLightAttenuation)
+#pragma glslify: export(calcLightAttenuation)
