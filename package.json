@@ -1,0 +1,33 @@
+{
+  "name": "glsl-basic-light-attenuation",
+  "version": "1.0.0",
+  "description": "GLSL function for computing light attenuation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeman-lab/glsl-basic-light-attenuation.git"
+  },
+  "keywords": [
+    "webgl",
+    "shader",
+    "lighting",
+    "stackgl"
+  ],
+  "author": "freeman-lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freeman-lab/glsl-basic-light-attenuation/issues"
+  },
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  },
+  "homepage": "https://github.com/freeman-lab/glsl-basic-light-attenuation#readme",
+  "dependencies": {
+    "glsl-basic-light": "^1.0.0"
+  }
+}
