@@ -1,5 +1,5 @@
 {
-  "name": "glsl-basic-light-attenuation",
+  "name": "glsl-scene-light-attenuation",
   "version": "1.0.0",
   "description": "GLSL function for computing light attenuation",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/freeman-lab/glsl-basic-light-attenuation.git"
+    "url": "git+https://github.com/freeman-lab/glsl-scene-light-attenuation.git"
   },
   "keywords": [
     "webgl",
@@ -19,15 +19,15 @@
   "author": "freeman-lab",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/freeman-lab/glsl-basic-light-attenuation/issues"
+    "url": "https://github.com/freeman-lab/glsl-scene-light-attenuation/issues"
   },
   "browserify": {
     "transform": [
       "glslify"
     ]
   },
-  "homepage": "https://github.com/freeman-lab/glsl-basic-light-attenuation#readme",
+  "homepage": "https://github.com/freeman-lab/glsl-scene-light-attenuation#readme",
   "dependencies": {
-    "glsl-basic-light": "^1.0.0"
+    "glsl-scene-light": "^1.0.0"
   }
 }
