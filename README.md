@@ -1,13 +1,13 @@
-# glsl-scene-light-attenuation
+# glsl-light-attenuation
 
-GLSL function for computing light attenuation in scenes. Designed for use as a shader component with [`glslify`](https://github.com/stackgl/glslify) and [`glsl-scene-light`](https://github.com/freeman-lab/glsl-scene-light).
+GLSL function for computing light attenuation. Designed for use as a shader component with [`glslify`](https://github.com/stackgl/glslify) and [`glsl-light`](https://github.com/freeman-lab/glsl-light).
 
 ## install
 
 To make avaialble in your project
 
 ```javascript
-npm install glsl-scene-light-attenuation --save
+npm install glsl-light-attenuation --save
 ```
 
 ## example
@@ -15,15 +15,15 @@ npm install glsl-scene-light-attenuation --save
 Define a light in your shader
 
 ```glsl
-pragma glslify: SceneLight = require('glsl-scene-light')
-uniform SceneLight light;
+pragma glslify: Light = require('glsl-light')
+uniform Light light;
 ```
 
-Then use this function alongside `glsl-scene-light-direction` to compute attenuation
+Then use this function alongside `glsl-light-direction` to compute attenuation
 
 ```glsl
-pragma glslify: attenuation = require('glsl-scene-light-attenuation')
-pragma glslify: direction = require('glsl-scene-light-direction')
+pragma glslify: attenuation = require('glsl-light-attenuation')
+pragma glslify: direction = require('glsl-light-direction')
 
 vec3 dir = direction(light, position);
 float attn = attenuation(light, dir);

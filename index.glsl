@@ -1,6 +1,6 @@
-#pragma glslify: SceneLight = require('glsl-scene-light')
+#pragma glslify: Light = require('glsl-light')
 
-float calcLightAttenuation(SceneLight light, vec3 direction) {
+float calcLightAttenuation(Light light, vec3 direction) {
 	float attenuation;
 	float angle;
 
@@ -10,8 +10,8 @@ float calcLightAttenuation(SceneLight light, vec3 direction) {
 		attenuation = 1.0 / (1.0 + light.attenuation * pow(length(direction), 2.0));
 		angle = degrees(acos(dot(-normalize(direction), normalize(light.target - light.position.xyz))));
 		if (angle > light.cutoff) {
-            attenuation = 0.0;
-        }
+       attenuation = 0.0;
+    }
 	}
 
 	return attenuation;
