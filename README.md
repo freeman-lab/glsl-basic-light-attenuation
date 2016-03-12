@@ -31,14 +31,12 @@ float attn = attenuation(light, dir);
 
 # algorithm
 
-Standard methods are used to compute attenuation treating the light as either point, directional, or spot, depending on its properties. For a good overview, see this [tutorial](http://www.tomdalling.com/blog/modern-opengl/07-more-lighting-ambient-specular-attenuation-gamma/).
+Attenuation is computed treating the light as either point or directional depending on its properties. For a good overview, see this [tutorial](http://www.tomdalling.com/blog/modern-opengl/07-more-lighting-ambient-specular-attenuation-gamma/).
 
 The primary parameter of the light is the `position`, a `vec4` in homogenous coordinates. The fourth element determines whether the light is directional or not. 
 
 - If the fourth element is `0.0`, it will produce directional light, and attenuation is 1.0.
-- If the fourth element is `1.0`, it will be treated as a point light source, and attenuation will falloff as governed by the `attenuation` parameter. 
-
-For point light sources, the parameters `target` and `cutoff` can additionally be used to create a spot light, i.e. light restricted to a cone, where `target` is where cone is pointing and `cutoff` is the angular direction. If `cutoff` is `180` there will be no restriction.
+- If the fourth element is `1.0`, it will be treated as a point light source, and attenuation will falloff as governed by the `radius` parameter, with the function `pow(clamp(1.0 - distance / radius, 0.0, 1.0), 2.0)`.
 
 # API
 
