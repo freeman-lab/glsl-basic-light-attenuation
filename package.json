@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/freeman-lab/glsl-light-attenuation#readme",
   "dependencies": {
-    "glsl-light": "^1.0.1"
+    "glsl-light": "^2.0.0"
   }
 }
